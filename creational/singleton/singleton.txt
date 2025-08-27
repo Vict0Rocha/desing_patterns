@@ -3,3 +3,23 @@ O singleton tem como objetivo principal garantir que uma classe tenha apenas uma
 
 O Singleton garante que, não importa quantas vezes alguém tente "criar" o gerenciador,
 todos receberão sempre a mesmíssima instância.
+
+
+Exemplos para utilizar o padrão singleton. 
+
+1 - Gerenciador de Configurações - (Configuration Manager)
+Para garantir que todo o sistema leia as mesmas configurações, evitando que uma
+parte do código use uma configuração desatualizada ou diferente.
+
+2 - Gerenciador de Conexão com Banco de Dados - (Database Connection)
+gerenciar um conjunto limitado de conexões e distribuí-las conforme a necessidade,
+evitando sobrecarregar o banco e o sistema.
+
+3 - Serviço de Log - (Logging)
+Garante que todas as mensagens sejam escritas no mesmo local e na ordem correta,
+sem que diferentes partes do sistema tentem escrever no mesmo arquivo ao mesmo
+tempo e corrompê-lo.
+
+4 - Acesso a Recursos de Hardware Compartilhados - (Hardware Access)
+Impede que múltiplos processos tentem usar o mesmo recurso de hardware simultaneamente,
+o que poderia causar conflitos e erros.
