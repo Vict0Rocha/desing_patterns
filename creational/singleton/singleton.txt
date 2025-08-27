@@ -1,0 +1,5 @@
+O singleton tem como objetivo principal garantir que uma classe tenha apenas uma
+única instância e fornecer um ponto de acesso global a essa instância.
+
+O Singleton garante que, não importa quantas vezes alguém tente "criar" o gerenciador,
+todos receberão sempre a mesmíssima instância.
