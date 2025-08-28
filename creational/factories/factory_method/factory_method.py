@@ -1,3 +1,10 @@
+"""
+Factory method é um padrão de criação que permite definir uma interface para
+criar objetos, mas deixa as subclasses decidirem quais objetos criar. O
+Factory method permite adiar a instanciação para as subclasses, garantindo o
+baixo acoplamento entre classes.
+"""
+
 from abc import ABC, abstractmethod
 
 class Veiculo(ABC):
@@ -22,7 +29,7 @@ class MotoLuxo(Veiculo):
         print('MOTO LUXO está buscando cliente...')
 
 class VeiculoFactory(ABC):
-    def __init__(self, tipo):
+    def __init__(self, tipo) -> None:
         self.carro = self.get_carro(tipo)
 
     @staticmethod
@@ -33,7 +40,6 @@ class VeiculoFactory(ABC):
         self.carro.busca_cliente()
 
 class ZonaNorteVeiculoFactory(VeiculoFactory):
-
     @staticmethod
     def get_carro(tipo: str) -> Veiculo: #type: ignore 
         if tipo == 'carro_luxo':
@@ -47,7 +53,6 @@ class ZonaNorteVeiculoFactory(VeiculoFactory):
         assert 0, 'Veiculo não existe!'
 
 class ZonaSulVeiculoFactory(VeiculoFactory):
-
     @staticmethod
     def get_carro(tipo: str) -> Veiculo: #type: ignore 
         if tipo == 'carro_popular':
@@ -62,11 +67,11 @@ if __name__ == '__main__':
 
     print('ZONA NORTE')
     for i in range(5):
-        carro = ZonaNorteVeiculoFactory(choice(veiculos_disponiveis_zona_norte))
-        carro.busca_cliente()
+        carro1 = ZonaNorteVeiculoFactory(choice(veiculos_disponiveis_zona_norte))
+        carro1.busca_cliente()
 
     print('ZONA SUL')
     for i in range(5):
-        carro = ZonaSulVeiculoFactory(choice(veiculos_disponiveis_zona_sul))
-        carro.busca_cliente()
+        carro2 = ZonaSulVeiculoFactory(choice(veiculos_disponiveis_zona_sul))
+        carro2.busca_cliente()
         
