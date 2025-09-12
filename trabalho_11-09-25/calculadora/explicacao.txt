@@ -1,0 +1,4 @@
+Projeto feito em sala de aula em grupo "A sala todo em um único projeto". 
+Fazer um sistema que utilize 3 padrões de prejetos da GoF.
+
+Padrões escolhidos - Singleton, Factory Method e Adapter.
