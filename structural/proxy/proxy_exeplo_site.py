@@ -26,7 +26,7 @@ criar cache, criar e destruir objetos, adiar execuções
 e muito mais...
 """
 
-from __future__ import annotations
+# from __future__ import annotations
 from abc import ABC, abstractmethod
 from time import sleep
 from typing import List, Dict
